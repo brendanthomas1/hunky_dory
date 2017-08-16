@@ -1,0 +1,11 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'Gemfile'
+
+Rails:
+  Enabled: true
+
+Documentation:
+  Enabled: false

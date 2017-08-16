@@ -1,4 +1,4 @@
-require "hunky_dory/engine"
+require 'hunky_dory/engine'
 
 module HunkyDory
   # Your code goes here...
