@@ -3,9 +3,18 @@ AllCops:
     - 'bin/**/*'
     - 'db/**/*'
     - 'Gemfile'
+    - 'spec/dummy/db/**/*'
 
 Rails:
   Enabled: true
 
 Documentation:
+  Enabled: false
+
+# have long blocks in specs
+Metrics/BlockLength:
+  Enabled: false
+
+# have long modules in specs
+Metrics/ModuleLength:
   Enabled: false
