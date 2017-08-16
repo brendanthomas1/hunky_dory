@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_170_816_143_433) do
-  create_table 'hunky_dory_changes', force: :cascade do |t|
-    t.string 'summary'
-    t.text 'text'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+ActiveRecord::Schema.define(version: 20170816143433) do
+
+  create_table "hunky_dory_changes", force: :cascade do |t|
+    t.string "summary"
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
 end
