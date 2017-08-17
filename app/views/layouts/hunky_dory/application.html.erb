@@ -12,7 +12,15 @@
 
     <% flash.each do |message_type, message| %>
       <div class="alert alert-<%= message_type.to_s %>">
-        <%= message %>
+        <% if message.is_a? Array %>
+          <ul>
+            <% message.each do |m| %>
+              <li><%= m %></li>
+            <% end %>
+          </ul>
+        <% else %>
+          <%= message %>
+        <% end %>
       </div>
     <% end %>
 

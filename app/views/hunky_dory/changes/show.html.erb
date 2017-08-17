@@ -4,8 +4,13 @@
 </p>
 
 <p>
-  <strong>Text:</strong>
-  <%= @change.text %>
+  <strong>Before:</strong>
+  <%= @change.before_description %>
+</p>
+
+<p>
+  <strong>After:</strong>
+  <%= @change.after_description %>
 </p>
 
 <%= link_to 'Edit', edit_change_path(@change) %> |

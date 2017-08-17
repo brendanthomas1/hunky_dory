@@ -21,6 +21,8 @@ module HunkyDory
     def edit; end
 
     # POST /changes
+    # TODO: Improve Flash messages
+    # rubocop:disable Metrics/MethodLength
     def create
       @change = Change.new(change_params)
 
@@ -28,9 +30,14 @@ module HunkyDory
         flash[:success] = 'Change was successfully created.'
         redirect_to @change
       else
+        messages = @change.errors.map do |attribute, message|
+          "#{attribute.capitalize} #{message}"
+        end
+        flash[:danger] = messages
         render :new
       end
     end
+    # rubocop:enable Metrics/MethodLength
 
     # PATCH/PUT /changes/1
     def update
@@ -58,7 +65,8 @@ module HunkyDory
 
     # Only allow a trusted parameter "white list" through.
     def change_params
-      params.require(:change).permit(:summary, :text)
+      params.require(:change)
+            .permit(:summary, :before_description, :after_description)
     end
   end
 end

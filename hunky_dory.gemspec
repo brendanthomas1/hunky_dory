@@ -25,4 +25,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rspec-rails', '~> 3.6'
   s.add_development_dependency 'rubocop',     '~> 0.49.0'
+  s.add_development_dependency 'shoulda-matchers'
 end

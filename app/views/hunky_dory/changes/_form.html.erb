@@ -1,24 +1,26 @@
 <%= form_with(model: change, local: true) do |form| %>
-  <% if change.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(change.errors.count, "error") %> prohibited this change from being saved:</h2>
-
-      <ul>
-      <% change.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="field form-group">
     <%= form.label :summary %>
     <%= form.text_field :summary, id: :change_summary, class: 'form-control' %>
   </div>
 
   <div class="field form-group">
-    <%= form.label :text %>
-    <%= form.text_area :text, id: :change_text, class: 'form-control' %>
+    <div class='row'>
+      <div class="col-md">
+        <%= form.label :before_description, 'How it used to be' %>
+        <%= form.text_area :before_description,
+          id: :change_before_description,
+          class: 'form-control',
+          rows: 10 %>
+      </div>
+      <div class="col-md">
+        <%= form.label :after_description, "What's new" %>
+        <%= form.text_area :after_description,
+          id: :change_after_description,
+          class: 'form-control',
+          rows: 10 %>
+      </div>
+    </div>
   </div>
 
   <div class="actions">

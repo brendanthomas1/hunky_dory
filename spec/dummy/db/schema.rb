@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170816143433) do
+ActiveRecord::Schema.define(version: 20170817204315) do
 
   create_table "hunky_dory_changes", force: :cascade do |t|
-    t.string "summary"
-    t.text "text"
+    t.string "summary", limit: 255, default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "before_description", limit: 10000, default: "", null: false
+    t.text "after_description", limit: 10000, default: "", null: false
   end
 
 end
