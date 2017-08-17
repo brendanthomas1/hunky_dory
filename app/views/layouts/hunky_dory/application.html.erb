@@ -8,6 +8,14 @@
 </head>
 <body>
   <div class='container'>
+    <br />
+
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type.to_s %>">
+        <%= message %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </div>
 

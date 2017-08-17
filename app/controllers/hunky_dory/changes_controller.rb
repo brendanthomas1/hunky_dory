@@ -25,7 +25,8 @@ module HunkyDory
       @change = Change.new(change_params)
 
       if @change.save
-        redirect_to @change, notice: 'Change was successfully created.'
+        flash[:success] = 'Change was successfully created.'
+        redirect_to @change
       else
         render :new
       end
@@ -34,7 +35,8 @@ module HunkyDory
     # PATCH/PUT /changes/1
     def update
       if @change.update(change_params)
-        redirect_to @change, notice: 'Change was successfully updated.'
+        flash[:success] = 'Change was successfully updated.'
+        redirect_to @change
       else
         render :edit
       end
@@ -43,7 +45,8 @@ module HunkyDory
     # DELETE /changes/1
     def destroy
       @change.destroy
-      redirect_to changes_url, notice: 'Change was successfully destroyed.'
+      flash[:success] = 'Change was successfully destroyed.'
+      redirect_to changes_url
     end
 
     private
