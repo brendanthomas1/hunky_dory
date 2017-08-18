@@ -12,5 +12,15 @@ module HunkyDory
         end
       end
     end
+
+    initializer :append_routes, before: :load_config_initializers do |app|
+      routes_file = Rails.root.join('config', 'routes.rb')
+
+      unless File.read(routes_file).include? 'mount HunkyDory::Engine'
+        app.routes.append do
+          mount HunkyDory::Engine, at: '/features'
+        end
+      end
+    end
   end
 end
