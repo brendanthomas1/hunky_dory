@@ -1,25 +1,25 @@
 # HunkyDory
-Short description and motivation.
+Because nobody wants to document feature changes in Microsoft F!@$%^& Word
 
-## Usage
-How to use my plugin.
-
-## Installation
-Add this line to your application's Gemfile:
-
+## Getting Started
+Add the gem to your application's Gemfile:
 ```ruby
 gem 'hunky_dory'
 ```
 
-And then execute:
+Bundle and then migrate to get HunkyDory's models:
 ```bash
-$ bundle
+bundle
+bin/rake db:migrate
 ```
 
-Or install it yourself as:
+Then generate the application's controller where you can set up authentication:
 ```bash
-$ gem install hunky_dory
+bundle exec rails g hunky_dory:install
 ```
+
+## Usage
+How to use my plugin.
 
 ## Contributing
 Contribution directions go here.
