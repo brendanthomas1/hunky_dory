@@ -1,5 +1,5 @@
 module HunkyDory
-  class ApplicationController < ActionController::Base
+  class ApplicationController < Hunky::ApplicationController
     protect_from_forgery with: :exception
   end
 end
