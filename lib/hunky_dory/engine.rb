@@ -1,5 +1,4 @@
-require 'jquery-rails'
-require 'bootstrap'
+require 'skeleton-rails'
 
 module HunkyDory
   class Engine < ::Rails::Engine

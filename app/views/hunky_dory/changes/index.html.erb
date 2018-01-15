@@ -1,8 +1,14 @@
 <h1>Changes</h1>
 
 <div class='row'>
-  <div class='col-md-10'>
-    <table class='table table-striped'>
+  <div class='two columns' style='text-align: center;'>
+    <br />
+    <br />
+    <%= link_to 'New Change', new_change_path, class: 'button', style: 'margin-top: 6px' %>
+  </div>
+
+  <div class='ten columns'>
+    <table class='u-full-width'>
       <thead>
         <tr>
           <th>Summary</th>
@@ -15,14 +21,10 @@
           <tr>
             <td><%= link_to change.summary, change %></td>
             <td><%= link_to 'Edit', edit_change_path(change) %></td>
-            <td><%= link_to 'Destroy', change, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= button_to 'Delete', change_path(change), method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
-  </div>
-
-  <div class='col-md-2' style='text-align: center;'>
-    <%= link_to 'New Change', new_change_path, class: 'btn btn-primary', style: 'margin-top: 6px' %>
   </div>
 </div>

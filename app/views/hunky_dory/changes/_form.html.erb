@@ -1,29 +1,25 @@
 <%= form_with(model: change, local: true) do |form| %>
-  <div class="field form-group">
-    <%= form.label :summary %>
-    <%= form.text_field :summary, id: :change_summary, class: 'form-control' %>
-  </div>
+  <%= form.label :summary %>
+  <%= form.text_field :summary, id: :change_summary, class: 'u-full-width' %>
 
-  <div class="field form-group">
-    <div class='row'>
-      <div class="col-md">
-        <%= form.label :before_description, 'How it used to be' %>
-        <%= form.text_area :before_description,
-          id: :change_before_description,
-          class: 'form-control',
-          rows: 10 %>
-      </div>
-      <div class="col-md">
-        <%= form.label :after_description, "What's new" %>
-        <%= form.text_area :after_description,
-          id: :change_after_description,
-          class: 'form-control',
-          rows: 10 %>
-      </div>
+  <div class='row'>
+    <div class="six columns">
+      <%= form.label :before_description, 'How it used to be' %>
+      <%= form.text_area :before_description,
+        id: :change_before_description,
+        class: 'u-full-width',
+        rows: 10 %>
+    </div>
+    <div class="six columns">
+      <%= form.label :after_description, "What's new" %>
+      <%= form.text_area :after_description,
+        id: :change_after_description,
+        class: 'u-full-width',
+        rows: 10 %>
     </div>
   </div>
 
   <div class="actions">
-    <%= form.submit 'Create Change', class: 'btn btn-primary' %>
+    <%= form.submit 'Create', class: 'btn btn-primary' %>
   </div>
 <% end %>

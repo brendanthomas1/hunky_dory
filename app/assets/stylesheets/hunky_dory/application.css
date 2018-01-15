@@ -1,0 +1,8 @@
+/*
+*= require normalize
+*= require skeleton
+*/
+
+textarea {
+  height: initial;
+}
