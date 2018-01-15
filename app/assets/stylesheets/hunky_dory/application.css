@@ -3,6 +3,10 @@
 *= require skeleton
 */
 
-textarea {
+#hunky_dory textarea {
   height: initial;
+}
+
+#hunky_dory .button_to {
+  margin-bottom: 0;
 }
