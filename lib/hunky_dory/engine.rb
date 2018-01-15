@@ -18,7 +18,7 @@ module HunkyDory
 
       unless File.read(routes_file).include? 'mount HunkyDory::Engine'
         app.routes.append do
-          mount HunkyDory::Engine, at: '/features'
+          mount HunkyDory::Engine, at: '/changelog'
         end
       end
     end
