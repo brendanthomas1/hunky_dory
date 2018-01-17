@@ -10,3 +10,12 @@
 #hunky_dory .button_to {
   margin-bottom: 0;
 }
+
+#hunky_dory .changelog td {
+  text-align: right;
+}
+
+#hunky_dory .changelog td:first-child {
+  width: 70%;
+  text-align: left;
+}
