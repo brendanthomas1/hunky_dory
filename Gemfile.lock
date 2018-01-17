@@ -3,6 +3,7 @@ PATH
   specs:
     hunky_dory (0.1.0)
       rails (~> 5.1.3)
+      redcarpet
       skeleton-rails
 
 GEM
@@ -98,6 +99,7 @@ GEM
     rainbow (2.2.2)
       rake
     rake (12.0.0)
+    redcarpet (3.4.0)
     rspec-core (3.6.0)
       rspec-support (~> 3.6.0)
     rspec-expectations (3.6.0)

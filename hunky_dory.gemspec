@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
                 'Rakefile', 'README.md']
 
   s.add_dependency 'rails', '~> 5.1.3'
+  s.add_dependency 'redcarpet'
   s.add_dependency 'skeleton-rails'
 
   s.add_development_dependency 'sqlite3'

@@ -4,13 +4,19 @@
 </p>
 
 <p>
-  <strong>Before:</strong>
-  <%= @change.before_description %>
+  <% if @change.before_description.present? %>
+    <strong>Before:</strong>
+    <div class='rendered-markdown'>
+      <%= render_markdown(@change.before_description) %>
+    </div>
+  <% end %>
 </p>
 
 <p>
   <strong>After:</strong>
-  <%= @change.after_description %>
+  <div class='rendered-markdown'>
+    <%= render_markdown(@change.after_description) %>
+  </div>
 </p>
 
 <%= link_to 'Edit', edit_change_path(@change) %> |

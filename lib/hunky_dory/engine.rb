@@ -1,4 +1,5 @@
 require 'skeleton-rails'
+require 'redcarpet'
 
 module HunkyDory
   class Engine < ::Rails::Engine
