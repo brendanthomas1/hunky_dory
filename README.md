@@ -13,7 +13,7 @@ bundle
 bin/rake db:migrate
 ```
 
-Then generate the application's controller where you can set up authentication:
+Then generate the application's controller where you can set up authorization:
 ```bash
 bundle exec rails g hunky_dory:install
 ```

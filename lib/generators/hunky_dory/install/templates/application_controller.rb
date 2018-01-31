@@ -1,17 +1,17 @@
 # All HunkyDory controllers inherit from this `Hunky::ApplicationController`,
-# making it the ideal place to put authentication logic or other
+# making it the ideal place to put authorization logic or other
 # before_actions.
 module Hunky
   class ApplicationController < ::ApplicationController
-    before_action :authenticate_user, only: %i[index show]
-    before_action :authenticate_admin, only: %i[create update destroy new edit]
+    before_action :authorize_user, only: %i[index show]
+    before_action :authorize_admin, only: %i[create update destroy new edit]
 
-    def authenticate_user
-      # TODO Add authentication logic here.
+    def authorize_user
+      # TODO Add authorization logic here.
     end
 
-    def authenticate_admin
-      # TODO Add authentication logic here.
+    def authorize_admin
+      # TODO Add authorization logic here.
     end
   end
 end
