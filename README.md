@@ -19,7 +19,20 @@ bundle exec rails g hunky_dory:install
 ```
 
 ## Usage
-How to use my plugin.
+To run the demo from the spec directory:
+```bash
+cd spec/dummy
+rails s
+```
+
+Navigate to `/changelog` to see your list of changes
+
+> But I don't like the name "changelog"
+
+Mount the engine wherever you want! Go to your routes file and:
+```ruby
+mount HunkyDory::Engine => '/your_cool_route_name'
+```
 
 ## Contributing
 Contribution directions go here.
