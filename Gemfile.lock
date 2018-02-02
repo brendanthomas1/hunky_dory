@@ -150,6 +150,7 @@ PLATFORMS
 
 DEPENDENCIES
   hunky_dory!
+  rake
   rspec-rails (~> 3.6)
   rubocop (~> 0.49.0)
   shoulda-matchers
