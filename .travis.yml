@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 2.3
+
+before_script:
+  - RAILS_ENV=test bundle exec rake db:migrate
+script:
+  - RAILS_ENV=test bundle exec rspec
+
+notifications:
+  email: false
