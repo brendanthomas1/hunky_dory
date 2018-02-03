@@ -9,8 +9,13 @@
 
 #hunky_dory .button-danger {
   color: #FFF;
-  background: #FF4E2E;
-  border: #FF4E2E;
+  background-color: #FF4E2E;
+  border-color: #FF4E2E;
+}
+#hunky_dory .button-danger:hover {
+  color: #FFF;
+  background-color: #E63515;
+  border-color: #E63515;
 }
 
 #hunky_dory .button_to {
