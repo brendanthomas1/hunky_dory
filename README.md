@@ -1,5 +1,6 @@
-# HunkyDory
+# HunkyDory [![Build Status](https://travis-ci.org/brendanthomas1/hunky_dory.svg?branch=master)](https://travis-ci.org/brendanthomas1/hunky_dory)
 Because nobody wants to document feature changes in Microsoft F!@$%^& Word
+
 
 ## Getting Started
 Add the gem to your application's Gemfile:
