@@ -6,7 +6,7 @@ module HunkyDory
 
     # GET /changes
     def index
-      @changes = Change.all
+      @changes = Change.all.order(created_at: :desc)
     end
 
     # GET /changes/1

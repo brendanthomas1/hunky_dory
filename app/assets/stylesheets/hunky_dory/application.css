@@ -7,6 +7,12 @@
   height: initial;
 }
 
+#hunky_dory .button-danger {
+  color: #FFF;
+  background: #FF4E2E;
+  border: #FF4E2E;
+}
+
 #hunky_dory .button_to {
   margin-bottom: 0;
 }
@@ -15,14 +21,25 @@
   text-align: right;
 }
 
+#hunky_dory .changelog td .button {
+  margin-bottom: 0;
+}
+
 #hunky_dory .changelog td:first-child {
   width: 70%;
   text-align: left;
 }
 
+#hunky_dory hr#page-break {
+  border: 0;
+  height: 1px;
+  margin-top: 0;
+  background-image: -webkit-linear-gradient(left, #8c8b8b, #bebebe, #f0f0f0);
+}
+
 #hunky_dory .rendered-markdown {
-  background: rgba(27,31,35,0.05);
-  min-height: 300px;
-  padding: 10px 15px;
-  border-radius: 3px;
+  min-height: 350px;
+  padding: 2.5rem 3rem;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
 }

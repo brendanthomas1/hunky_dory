@@ -1,13 +1,12 @@
 <h1>Changes</h1>
+<hr id='page-break' />
 
 <div class='row'>
-  <div class='two columns' style='text-align: center;'>
-    <br />
-    <br />
-    <%= link_to 'New Change', new_change_path, class: 'button', style: 'margin-top: 6px' %>
+  <div class='twelve columns' style='text-align: center;'>
+    <%= link_to 'Add a Change', new_change_path, class: 'button', style: 'margin-top: 6px' %>
   </div>
 
-  <div class='ten columns'>
+  <div class='twelve columns'>
     <table class='u-full-width changelog'>
       <thead>
         <tr>
@@ -20,8 +19,8 @@
         <% @changes.each do |change| %>
           <tr>
             <td><%= link_to change.summary, change %></td>
-            <td><%= link_to 'Edit', edit_change_path(change) %></td>
-            <td><%= button_to 'Delete', change_path(change), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Edit', edit_change_path(change), class: 'button button-primary' %></td>
+            <td><%= button_to 'Delete', change_path(change), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button button-danger' %></td>
           </tr>
         <% end %>
       </tbody>
