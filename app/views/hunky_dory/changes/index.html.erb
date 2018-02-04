@@ -7,23 +7,29 @@
   </div>
 
   <div class='twelve columns'>
-    <table class='u-full-width changelog'>
-      <thead>
-        <tr>
-          <th>Summary</th>
-          <th colspan="2"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @changes.each do |change| %>
+    <% if @changes.any? %>
+      <table class='u-full-width changelog'>
+        <thead>
           <tr>
-            <td><%= link_to change.summary, change %></td>
-            <td><%= link_to 'Edit', edit_change_path(change), class: 'button button-primary' %></td>
-            <td><%= button_to 'Delete', change_path(change), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button button-danger' %></td>
+            <th>Summary</th>
+            <th colspan="2"></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+          <% @changes.each do |change| %>
+            <tr>
+              <td><%= link_to change.summary, change %></td>
+              <td><%= link_to 'Edit', edit_change_path(change), class: 'button button-primary' %></td>
+              <td>
+                <%= button_to 'Delete', change_path(change),
+                    method: :delete, data: { confirm: 'Are you sure?' },
+                    class: 'button button-danger' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
   </div>
 </div>
