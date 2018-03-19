@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Use kaminari for pagination
+gem 'kaminari'
+
 # Declare your gem's dependencies in hunky_dory.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.

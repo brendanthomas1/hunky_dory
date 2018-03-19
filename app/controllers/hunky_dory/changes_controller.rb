@@ -4,9 +4,11 @@ module HunkyDory
   class ChangesController < ApplicationController
     before_action :set_change, only: %i[show edit update destroy]
 
+    PAGE_LENGTH = 25
+
     # GET /changes
     def index
-      @changes = Change.all.order(created_at: :desc)
+      @changes = Change.page(params[:page]).per(PAGE_LENGTH).order(created_at: :desc)
     end
 
     # GET /changes/1
