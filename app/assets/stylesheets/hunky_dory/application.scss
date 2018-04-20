@@ -1,0 +1,73 @@
+/*
+*= require normalize
+*= require skeleton
+*/
+
+#hunky_dory {
+  $danger-color: #FF4E2E;
+  $danger-color-alpha: rgba(#FF4E2E, 0.8);
+  $danger-hover-color: #E63515;
+  $success-color: #2CF470;
+  $success-color-alpha: rgba($success-color, 0.8);
+
+  textarea {
+    height: initial;
+  }
+
+  .button-danger {
+    color: #FFF;
+    background-color: $danger-color;
+    border-color: $danger-color;
+
+    &:hover {
+      color: #FFF;
+      background-color: $danger-hover-color;
+      border-color: $danger-hover-color;
+    }
+  }
+
+  .button_to {
+    margin-bottom: 0;
+  }
+
+  .changelog td {
+    text-align: right;
+
+    &:first-child {
+      width: 70%;
+      text-align: left;
+    }
+
+    .button {
+      margin-bottom: 0;
+    }
+  }
+
+  hr#page-break {
+    border: 0;
+    height: 1px;
+    margin-top: 0;
+    background-image: -webkit-linear-gradient(left, #8c8b8b, #bebebe, #f0f0f0);
+  }
+
+  .rendered-markdown {
+    min-height: 350px;
+    padding: 2.5rem 3rem;
+    border-radius: 4px;
+    border: 1px solid #e1e1e1;
+  }
+
+  .alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+
+  .alert-success {
+    background-color: $success-color-alpha;
+  }
+
+  .alert-danger {
+    background-color: $danger-color-alpha;
+  }
+}
