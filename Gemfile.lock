@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     hunky_dory (0.1.0)
-      rails (~> 5.1.3)
+      rails (~> 5.1)
       redcarpet
       skeleton-rails
 
@@ -50,12 +50,14 @@ GEM
     ast (2.3.0)
     builder (3.2.3)
     concurrent-ruby (1.0.5)
+    crass (1.0.4)
     diff-lcs (1.3)
     erubi (1.6.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
-    loofah (2.0.3)
+    loofah (2.2.2)
+      crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
@@ -63,8 +65,8 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
-    nio4r (2.2.0)
-    nokogiri (1.8.1)
+    nio4r (2.3.0)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     parallel (1.12.0)
     parser (2.4.0.0)
@@ -157,4 +159,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
